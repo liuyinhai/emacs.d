@@ -2,6 +2,8 @@
 ;;; a number of other files.
 
 (add-to-list 'load-path user-emacs-directory)
+(require 'init-yinhai)
+
 (require 'init-benchmarking) ;; Measure startup time
 
 ;;----------------------------------------------------------------------------
@@ -86,6 +88,8 @@
 
 (require 'init-marmalade)
 (require 'init-misc)
+
+
 
 ;; Extra packages which don't require any configuration
 
