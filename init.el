@@ -136,6 +136,9 @@
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
 
+(prefer-coding-system 'gbk)
+(setq default-buffer-file-coding-system 'gbk)
+
 
 (provide 'init)
 
