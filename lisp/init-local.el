@@ -22,15 +22,14 @@
 (load "init-coding")
 
 (set-background-color "#C7EDCC")
-(setenv "http_proxy" "http://web-proxy.oa.com:8080")
-
-(require 'cl-lib)
-(yas/load-directory "~/.emacs.d/snippets")
 
 (require 'org-latex-hack)
 
-
-(prefer-coding-system 'gbk)
-(setq default-buffer-file-coding-system 'gbk)
+(unless *is-linux*
+  (require 'cl-lib)
+  (yas/load-directory "~/.emacs.d/snippets")
+  (setenv "http_proxy" "http://web-proxy.oa.com:8080")
+  (prefer-coding-system 'gbk)
+  (setq default-buffer-file-coding-system 'gbk))
 
 (provide 'init-local)

@@ -13,6 +13,7 @@
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
+(defconst *is-linux* (eq system-type 'gnu/linux))
 
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
@@ -135,9 +136,6 @@
           (lambda ()
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
-
-(prefer-coding-system 'gbk)
-(setq default-buffer-file-coding-system 'gbk)
 
 
 (provide 'init)
